@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<head>
+
+</head>
+<style>
+    body {
+        background-image: linear-gradient(45deg, #0d52d0, #159610);
+        background-repeat: no-repeat;
+        
+    }
+
+    .box {
+        margin-right: auto;
+        margin-left: auto;
+        margin-top: auto;
+        display: block;
+        height: fit-content;
+        width: fit-content;
+        border: 2px solid #999999;
+        border-radius: 10px 10px 10px 10px;
+        background-color: rgba(38, 38, 38,0.3);
+        color: #fff;
+    }
+
+    #title {
+        display:block;
+        text-align: center;
+        text-decoration: solid;
+        text-shadow: 2px 2px 2px #80aaff;
+        margin-bottom: auto;
+        font-size: 50px;
+    }
+
+    .description {
+        opacity: 0.7;
+    }
+
+    .center {
+        display:block;
+        margin-left: auto;
+        margin-right: auto;
+
+
+        width: fit-content;
+    }
+
+    #survey-form {
+        display: inline-grid;
+        grid-template-columns: min-content;
+        padding: 20px;
+        margin-right: auto;
+        margin-left:auto;
+        margin-top:auto;
+        margin-bottom: auto;
+
+    }
+
+    input {
+        margin-top: 12px;
+        margin-bottom:12px;
+    }
+
+    input[type=text] {
+        width: 500px;
+        padding: 12px 20px;
+        margin: 12px 0 12px 0;
+    }
+
+    input[type=radio] {
+        margin-left: 60px;
+        
+    }
+
+    input[type=number] {
+        width: 200px;
+        display:block;
+    }
+
+    textarea {
+        display:block;
+        width: 100%;
+        height: 100px;
+        margin-top: 20px;
+    }
+    .spacing {
+        margin-top: 40px;
+    }
+</style>
+<body>
+    <div class="box">
+        <h1 id="title"  > Covid-19 Survey</h1>
+        <h5 class="center description" >This is a survey about Covid-19 Disease</h5>
+        <hr />
+        <div>
+            <form action="https://formspree.io/f/myylnezg" method="post" id="survey-form">
+                <fieldset class="center" style="float: none;">
+                    <label for="first-name">
+                        First Name:
+                        <input type="text" name="first-name" id="first-name" placeholder="First Name e.g. Emily, Martin" required />
+                    </label>
+                    <label for="last-name">
+                        Last Name:
+                        <input type="text" name="last-name" id="last-name" placeholder="Last Name e.g. Smith, Miller" required />
+                    </label>
+                    <label for=" email-address">
+                        Email Address:
+                        <input type="email" name="email-address" id=" email-address" placeholder="EmilySmith@gmail.com" required />
+                    </label>
+                    <label for=" birthdate">
+                        Birth Date
+                        <input type="date" name="birthdate" id=" birthdate" />
+                    </label>
+                    <br />
+                    <label for="gender">
+                        Gender:<br />
+                        <input type="radio" name="gender" id="female" value="Female" />
+                        <label for="female">Female</label><br />
+                        <input type="radio" name="gender" id="male" value="Male" />
+                        <label for="male">Male</label><br />
+                        <input type="radio" name="gender" id="else" value="Else" />
+                        <label for="else">I don't want to answer</label><br />
+                    </label>
+                    <label for="people" class="spacing">
+                        How many people do you interact in a day?
+                        <input type="number" name="people" id="number" placeholder="Family/Friends/You live with" min="1" max="50 " />
+                    </label>
+                    <label for="past" class="spacing">
+                        Did you or your family/friends had covid?
+                        <input type="radio" name="had-covid" id="had-covid" value="Yes" />
+                        <label for="had-covid">Yes</label>
+                        <input type="radio" name="had-covid" id="no-had-covid" value="No" />
+                        <label for="no-had-covid">No</label>
+                    </label>
+                    <label for="symptoms" style="display:block;" class="spacing">
+                        If yes, what symptoms did you had?<br />
+                        <input type="checkbox" name="symptoms" id=" fever" value="fever" />
+                        <label for="fever">Fever</label>
+                        <input type="checkbox" name="symptoms" id=" dry-cough" value="dry-cough" />
+                        <label for="dry-cough">Dry Cough</label>
+                        <input type="checkbox" name="symptoms" id=" tiredness" value="tiredness" />
+                        <label for="tiredness">Tiredness</label>
+                        <input type="checkbox" name="symptoms" id=" breathing" value="breathing" />
+                        <label for="breathing">Difficulty breathing/ shortness of breath</label>
+                        <input type="checkbox" name="symptoms" id=" chest-pain" value="chest-pain" />
+                        <label for="chest-pain">Chest pain or pressure</label>
+                        <input type="checkbox" name="symptoms" id=" lost-taste" value="lost-taste" />
+                        <label for="lost-taste">Loss of taste or smell</label>
+                        <input type="checkbox" name="symptoms" id=" headache" value="headache" />
+                        <label for="headache">Headache</label>
+                    </label>
+                    <label for="vaccine-past" class="spacing">
+                        Did you had the vaccine?
+                        <input type="radio" name="Vaccine-before" id="vaccine-yes" value="yes" />
+                        <label for="vaccine-yes">Yes</label>
+                        <input type="radio" name="Vaccine-before" id="vaccine-no" value="no" />
+                        <label for="vaccine-no">No</label>
+                    </label>
+                    <br />
+                    <label for="vacine" class="spacing">
+                        If yes, which one?
+                        <select name="vaccine" id="dropdown">
+                            <option value="Moderna<">Moderna</option>
+                            <option value="Pfizer">Pfizer</option>
+                            <option value="AstraZeneca">AstraZeneca</option>
+                            <option value="Johnson & Johnson">Johnson & Johnson</option>
+                            <option value="CureVac">CureVac</option>
+                        </select>
+                    </label>
+                    <br />
+                    <textarea placeholder="Live us a message to improve our survey..." class="spacing"></textarea>
+                    <br />
+                    <input type="submit" name="Send" id="submit" value="Submit" style="width:100px; display:block; margin-right:auto; margin-left:auto" />
+                </fieldset>
+                <div class="center" style="margin-top:25px;">
+                    &copy; Copyright 2021 Chivu Theodora
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
